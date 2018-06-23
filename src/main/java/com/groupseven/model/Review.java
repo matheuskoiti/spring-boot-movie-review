@@ -1,5 +1,9 @@
 package com.groupseven.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,16 +14,19 @@ public class Review {
 
     private Double score;
 
-    private Integer movieId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Movie movie;
 
     private String description;
 
-    public Integer getMovieId() {
-        return movieId;
+    public Movie getMovie() {
+        return movie;
     }
 
-    public void setMovieId(Integer movie_id) {
-        this.movieId = movie_id;
+    public void setMovie(Movie movie) {
+        this.movie = movie;
     }
 
     public Integer getId() {

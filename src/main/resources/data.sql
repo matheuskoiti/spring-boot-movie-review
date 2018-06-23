@@ -1,0 +1,10 @@
+INSERT INTO movie (id, image_url, name) VALUES (1,'url', 'Star Wars: The Last Jedi');
+INSERT INTO movie (id, image_url, name) VALUES (2,'url', 'Jurassic World: Fallen Kingdom');
+INSERT INTO movie (id, image_url, name) VALUES (3,'url', 'Vingadores: Guerra Infinita');
+INSERT INTO movie (id, image_url, name) VALUES (4,'url', 'Deadpool 2');
+INSERT INTO movie (id, image_url, name) VALUES (5,'url', 'Oceans 8');
+INSERT INTO movie (id, image_url, name) VALUES (6,'url', 'Wonder Woman');
+INSERT INTO movie (id, image_url, name) VALUES (7,'url', 'Hereditary');
+INSERT INTO movie (id, image_url, name) VALUES (8,'url', 'Truly');
+INSERT INTO movie (id, image_url, name) VALUES (9,'url', 'Solo: a Star Wars story');
+INSERT INTO movie (id, image_url, name) VALUES (10,'url', 'Baronesa');
