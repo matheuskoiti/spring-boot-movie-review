@@ -1,0 +1,7 @@
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/Application.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/model/Movie.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/repository/ReviewRepository.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/repository/MovieRepository.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/controller/MovieController.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/model/Review.java
+/home/msilva/projects/movieReview/src/main/java/com/groupseven/controller/ReviewController.java
