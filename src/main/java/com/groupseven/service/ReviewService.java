@@ -18,14 +18,28 @@ public class ReviewService {
     @Autowired
     private MovieRepository movieRepository;
 
+    /**
+     * Return all reviews from database
+     * @return
+     */
     public Iterable<Review> getAllReviews() {
         return reviewRepository.findAll();
     }
 
+    /**
+     * Return all reviews made for the movie
+     * @param movieId
+     * @return
+     */
     public List<Review> getAllReviewsByMovieId(Integer movieId) {
         return reviewRepository.findByMovieId(movieId);
     }
 
+    /**
+     * Calculates the average score from a movie
+     * @param movieId
+     * @return
+     */
     public double getMovieAverageScore(Integer movieId) {
         List<Review> listReview = reviewRepository.findByMovieId(movieId);
 
@@ -42,6 +56,13 @@ public class ReviewService {
         }
     }
 
+    /**
+     * Create a new review
+     * @param score
+     * @param description
+     * @param movieId
+     * @return
+     */
     public Review createReview (Double score, String description, Integer movieId) {
         Movie movie = movieRepository.findById(movieId);
 

@@ -14,6 +14,10 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
+    /**
+     * Return all movies from database
+     * @return
+     */
     @GetMapping(path="/all")
     @CrossOrigin
     public @ResponseBody
@@ -21,6 +25,11 @@ public class MovieController {
         return movieService.getAllMovies();
     }
 
+    /**
+     * Return only the movie specified by id
+     * @param movieId
+     * @return
+     */
     @GetMapping("/{id}")
     @CrossOrigin
     public @ResponseBody

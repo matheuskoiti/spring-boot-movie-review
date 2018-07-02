@@ -1,9 +1,6 @@
 package com.groupseven.controller;
 
-import com.groupseven.model.Movie;
 import com.groupseven.model.Review;
-import com.groupseven.repository.MovieRepository;
-import com.groupseven.repository.ReviewRepository;
 import com.groupseven.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +15,10 @@ public class ReviewController {
     @Autowired
     private ReviewService reviewService;
 
+    /**
+     * Return all reviews from database
+     * @return
+     */
     @GetMapping(path="/all")
     @CrossOrigin
     public @ResponseBody
@@ -25,6 +26,13 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
+    /**
+     * Add a new review
+     * @param score
+     * @param description
+     * @param movieId
+     * @return
+     */
     @GetMapping(path="/add")
     @CrossOrigin
     public @ResponseBody Review createReview (@RequestParam Double score,
@@ -34,6 +42,11 @@ public class ReviewController {
       return reviewService.createReview (score, description, movieId);
     }
 
+    /**
+     * Return a review that has the id movieId
+     * @param movieId
+     * @return
+     */
     @GetMapping("/movie/{movieId}")
     @CrossOrigin
     public @ResponseBody
@@ -41,6 +54,11 @@ public class ReviewController {
         return reviewService.getAllReviewsByMovieId(movieId);
     }
 
+    /**
+     * Return the average score from the movie
+     * @param movieId
+     * @return
+     */
     @GetMapping("/average-score/movie/{movieId}")
     @CrossOrigin
     public @ResponseBody
